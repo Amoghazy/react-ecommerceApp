@@ -47,7 +47,7 @@ export default function Products() {
   const productsToShow = products.slice(dataFirst, previousData);
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Products</h1>
+      <h1 className="text-3xl font-bold underline">Products...</h1>
       <div className="container min-h-screen  m-auto flex  flex-wrap justify-around my-5">
         {productsToShow.map((product: IProduct) => (
           <SinglProduct key={product.id} product={product} />
