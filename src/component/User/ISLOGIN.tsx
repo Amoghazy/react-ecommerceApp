@@ -9,7 +9,7 @@ import {
 } from "tw-elements-react";
 import { removeToken } from "../../RTK/Slices/tokenSlice";
 import { Istate } from "../../types/ISTATE";
-
+import iconAvatar from "../../assets/HomeImages/ReactProjectFinal.jpg";
 export default function ISLOGIN() {
   const cart = useSelector((state: Istate) => state.cart);
   console.log(cart);
@@ -30,7 +30,6 @@ export default function ISLOGIN() {
           data-te-dropdown-toggle-ref
           aria-expanded="false"
         >
-
           <span className="[&>svg]:w-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -44,9 +43,6 @@ export default function ISLOGIN() {
           <span className="absolute -mt-4 ml-2.5 rounded-full bg-danger px-[0.35em] py-[0.15em] text-[0.6rem] font-bold leading-none text-white">
             {cart.length}
           </span>
-
-
-
         </Link>
       </div>
 
@@ -65,7 +61,7 @@ export default function ISLOGIN() {
               aria-expanded="false"
             >
               <img
-                src="/src/assets/HomeImages/ReactProjectFinal.jpg"
+                src={iconAvatar}
                 className="rounded-full"
                 style={{ height: "25px", width: "25px" }}
                 alt=""

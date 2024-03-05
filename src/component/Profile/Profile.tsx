@@ -5,7 +5,7 @@ import "./profile.css";
 import { useQuery } from "react-query";
 import axios from "axios";
 import "core-js/stable/atob";
-
+import avatar from "../../assets/avatar.png";
 export default function Profile() {
   const headers = {
     Authorization: `Bearer ${sessionStorage.getItem("token")}`,
@@ -59,7 +59,7 @@ export default function Profile() {
         {" "}
         <img
           className="w-40 h-40 shadow-lg z-10 profile-pic -translate-y-2/3"
-          src="/src/assets/avatar.png"
+          src={avatar}
           alt=""
         />
       </div>
