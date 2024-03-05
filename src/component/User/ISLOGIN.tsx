@@ -64,7 +64,7 @@ export default function ISLOGIN() {
                 src={iconAvatar}
                 className="rounded-full"
                 style={{ height: "25px", width: "25px" }}
-                alt=""
+                alt="Profile"
                 loading="lazy"
               />
             </a>
