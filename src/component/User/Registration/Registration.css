@@ -1,0 +1,27 @@
+body {
+  min-height: 100vh;
+}
+.typing {
+  /* height: 80vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register {
+  width: 22ch;
+  animation: typing 2s steps(25), effect 0.7s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: rgb(50, 48, 133);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
