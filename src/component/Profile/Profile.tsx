@@ -52,7 +52,6 @@ export default function Profile() {
     );
   if (isError) return <div>Error</div>;
   const user = data.userUpdated;
-  console.log(user);
   return (
     <div className="container-fluid min-h-screen">
       <div className="w-full bg-primary h-60"></div>
