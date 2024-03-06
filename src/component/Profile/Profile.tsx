@@ -6,6 +6,7 @@ import { useQuery } from "react-query";
 import axios from "axios";
 import "core-js/stable/atob";
 import avatar from "../../assets/avatar.png";
+import { Helmet } from "react-helmet-async";
 export default function Profile() {
   const headers = {
     Authorization: `Bearer ${sessionStorage.getItem("token")}`,
@@ -41,6 +42,11 @@ export default function Profile() {
   if (isLoading)
     return (
       <>
+        {" "}
+        <Helmet>
+          <title>Profile</title>
+          <meta name="description" content="Profile page for user" />
+        </Helmet>
         <div className="justify-center min-h-screen items-center flex">
           Loading...
           <div

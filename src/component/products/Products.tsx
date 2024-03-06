@@ -6,10 +6,9 @@ import SinglProduct from "./SingelProduct";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../RTK/Slices/ProductsSlice";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function Products() {
- 
-
   const [page, setPage] = useState(1);
   const products = useSelector(
     (state: { token: string; products: IProduct[] }) => state.products
@@ -47,6 +46,11 @@ export default function Products() {
   const productsToShow = products.slice(dataFirst, previousData);
   return (
     <>
+      {" "}
+      <Helmet>
+        <title>Products</title>
+        <meta name="description" content="Products page for website ecom app" />
+      </Helmet>
       <h1 className="text-3xl font-bold underline">Products...</h1>
       <div className="container min-h-screen  m-auto flex  flex-wrap justify-around my-5">
         {productsToShow.map((product: IProduct) => (
